@@ -1,0 +1,343 @@
+/* Styles globaux */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 246, 246);
+}
+head {
+  background-color: #982323;
+  color: #eadada;
+}
+/* En-tête */
+/* nav */
+/* Barre de navigation */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo ou titre */s
+.logo {
+  color: white;
+  font-size: 1.2em;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Styles mobiles */
+@media (max-width: 1000px) {
+  /* cacher le menu horizontal */
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    z-index: 1;
+  }
+
+  /* afficher le menu quand ouvert */
+  .menu.show {
+    display: flex;
+  }
+
+  /* Afficher le burger */
+  .burger {
+    display: flex;
+  }
+}
+/* Styles pour le contenu principal dans le*/
+main {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+/* 
+    Les articles sont initialement déplacés vers la gauche et transparents.
+    La transition permet un effet de fade-in et de glissement lors de l'ajout de la classe fade-in.
+    will-change optimise les performances pour les propriétés transform et opacity.
+*/
+article {
+  /* fait entrer les articles par la gauche */
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s;
+  will-change: transform, opacity;
+}
+
+article.fade-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+article {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+/* class pour le conteneur flexible (parent) pour les articles */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* wrap articles : permet de les aligner en colonnes sur les petits écrans. class combiné avec .d-flex */
+.wrap {
+  flex-wrap: wrap;
+}
+/* class pour les boutons */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button a {
+  color: white;
+  text-decoration: none;
+}
+/* couleur des icônes */
+.htmlColor {
+  color: #e44d26;
+}
+.cssColor {
+  color: #2965f1;
+}
+.jsColor {
+  color: #f7df1e;
+}
+.phpColor {
+  color: #8993be;
+}
+.kotlinColor {
+  color: #0095d5;
+}
+.pythonColor {
+  color: #3776ab;
+}
+.gitColor {
+  color: #f05032;
+}
+.githubColor {
+  color: #181717;
+}
+.sqlColor {
+  color: #e34f26;
+}
+.linuxColor {
+  color: #fcc624;
+}
+.terminalColor {
+  color: #4d4d4d;
+}
+.angularColor {
+  color: #dd0031;
+}
+/* class pour les tailles d'icônes */
+.icon {
+  font-size: 3rem;
+}
+.icon-small {
+  font-size: 16px;
+}
+.icon-large {
+  font-size: 32px;
+}
+/* class pour les logos */
+.kotlinLogo {
+  width: 3rem;
+  height: auto;
+}
+/* class pour le pied de page */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  bottom: 0;
+  width: 100%;
+}
+.commandes-linux {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+}
+
+.commandes-linux h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* Tableau */
+.commandes-linux table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* En-tête */
+.commandes-linux thead {
+    background-color: #222;
+    color: white;
+}
+
+.commandes-linux th {
+    padding: 15px;
+    text-align: left;
+    font-size: 17px;
+}
+
+/* Cellules */
+.commandes-linux td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+/* Une ligne sur deux */
+.commandes-linux tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+/* Effet au survol */
+.commandes-linux tbody tr:hover {
+    background-color: #e8f4ff;
+}
+
+/* Affichage des commandes */
+.commandes-linux code {
+    background-color: #272822;
+    color: #00ff88;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+}
+
+/* Responsive pour téléphone */
+@media (max-width: 700px) {
+    .commandes-linux {
+        width: 95%;
+        overflow-x: auto;
+    }
+
+    .commandes-linux table {
+        min-width: 700px;
+    }
+}
+/* Footer : fond sombre, texte clair, espace autour */
+.site-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Centre le contenu et limite sa largeur pour rester lisible */
+.footer-contenu {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Titre du formulaire */
+.footer-contenu h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+/* Chaque groupe label + champ : espace entre les groupes */
+.form-contact .champ {
+  margin-bottom: 18px;
+}
+
+/* Labels : au-dessus du champ, en gras */
+.form-contact label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Champs de saisie et zone de texte */
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box; /* le padding ne dépasse pas la largeur de 100% */
+}
+
+/* La zone de texte ne s'agrandit que verticalement */
+.form-contact textarea {
+  resize: vertical;
+}
+
+/* Mise en valeur du champ actif */
+.form-contact input:focus,
+.form-contact textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Bouton d'envoi */
+.form-contact button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Changement de couleur au survol */
+.form-contact button:hover {
+  background-color: #2980b9;
+}

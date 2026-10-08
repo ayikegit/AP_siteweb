@@ -1,0 +1,67 @@
+/* Réglages de base */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+/* ----- Menu de navigation ----- */
+nav {
+  background-color: #2c3e50;
+}
+
+nav ul {
+  list-style: none;          /* enlève les puces */
+  margin: 0;
+  padding: 0;
+  display: flex;             /* met les liens côte à côte */
+  justify-content: center;
+}
+
+nav a {
+  display: block;
+  padding: 15px 25px;
+  color: #ecf0f1;
+  text-decoration: none;     /* enlève le soulignement */
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+nav a:hover {
+  background-color: #3498db;
+}
+
+/* ----- Page en construction ----- */
+.construction {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.construction h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.construction p {
+  font-size: 1.15rem;
+  margin-bottom: 25px;
+}
+
+.retour {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.retour:hover {
+  background-color: #2980b9;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Global.css" />
+    <title>COURS SIO WEB | HTML</title>
+  </head>
+  <body>
+    <!-- En-tête de la page -->
+    <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <div class="menu" id="menu">
+          <a href="../index.html">Accueil</a>
+          <a href="html.html">HTML</a>
+          <a href="css.html">CSS</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="php.html">PHP</a>
+          <a href="kotlin.html">Kotlin</a>
+          <a href="python.html">Python</a>
+          <a href="sql.html">SQL</a>
+          <a href="angular.html">Angular</a>
+          <a href="git.html">Git</a>
+          <a href="github.html">GitHub</a>
+          <a href="linux.html">Linux</a>
+          <a href="linux_command_line.html">Ligne de commande Linux</a>
+        </div>
+        <div
+          class="burger"
+          id="burger"
+          aria-label="Menu"
+          aria-expanded="false"
+          role="button"
+          tabindex="0"
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+    </header>
+<section class="commandes-linux">
+    <h2>Les commandes Linux de base</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Commande</th>
+                <th>Description</th>
+                <th>Exemple</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td><code>pwd</code></td>
+                <td>Affiche le répertoire courant</td>
+                <td><code>pwd</code></td>
+            </tr>
+
+            <tr>
+                <td><code>ls</code></td>
+                <td>Affiche les fichiers et dossiers</td>
+                <td><code>ls -l</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cd</code></td>
+                <td>Permet de changer de répertoire</td>
+                <td><code>cd Documents</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mkdir</code></td>
+                <td>Crée un nouveau dossier</td>
+                <td><code>mkdir projet</code></td>
+            </tr>
+
+            <tr>
+                <td><code>touch</code></td>
+                <td>Crée un nouveau fichier</td>
+                <td><code>touch index.html</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cp</code></td>
+                <td>Copie un fichier ou un dossier</td>
+                <td><code>cp fichier.txt sauvegarde.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>mv</code></td>
+                <td>Déplace ou renomme un fichier</td>
+                <td><code>mv ancien.txt nouveau.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rm</code></td>
+                <td>Supprime un fichier</td>
+                <td><code>rm fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>rmdir</code></td>
+                <td>Supprime un dossier vide</td>
+                <td><code>rmdir dossier</code></td>
+            </tr>
+
+            <tr>
+                <td><code>cat</code></td>
+                <td>Affiche le contenu d'un fichier</td>
+                <td><code>cat fichier.txt</code></td>
+            </tr>
+
+            <tr>
+                <td><code>clear</code></td>
+                <td>Efface le contenu du terminal</td>
+                <td><code>clear</code></td>
+            </tr>
+
+            <tr>
+                <td><code>whoami</code></td>
+                <td>Affiche l'utilisateur actuel</td>
+                <td><code>whoami</code></td>
+            </tr>
+
+            <tr>
+                <td><code>date</code></td>
+                <td>Affiche la date et l'heure</td>
+                <td><code>date</code></td>
+            </tr>
+
+            <tr>
+                <td><code>man</code></td>
+                <td>Affiche le manuel d'une commande</td>
+                <td><code>man ls</code></td>
+            </tr>
+
+            <tr>
+                <td><code>sudo</code></td>
+                <td>Exécute une commande avec les droits administrateur</td>
+                <td><code>sudo apt update</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<footer class="site-footer"> <div class="footer-contenu"> <h2>Contactez-moi</h2> <form class="form-contact" action="#" method="post"> <div class="champ"> <label for="nom">Nom :</label> <input type="text" id="nom" name="nom" required /> </div> <div class="champ"> <label for="email">Email :</label> <input type="email" id="email" name="email" required /> </div> <div class="champ"> <label for="commentaires">Commentaires :</label> <textarea id="commentaires" name="commentaires" rows="5" placeholder="Écrivez votre message ici..."></textarea> </div> <button type="submit">Envoyer</button> </form> </div> </footer>
